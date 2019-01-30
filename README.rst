@@ -22,11 +22,31 @@ Applies the header and footer from a template word document to a batch of other 
 * Free software: MIT license
 * Documentation: https://batch-header-footer-applicator.readthedocs.io.
 
-
-Features
+Dependencies
 --------
 
-* TODO
+If you'd only like to use this module, you'll only need the following dependencies:
+
+- pywin32
+- PySimpleGui
+
+Which can be installed via the requirements.txt file: `pip install -r requirements.txt`
+
+If you'd like to develop the module as well, you'll need the requirements_dev.txt file: `pip install -r requirements_dev.txt`
+
+Usage
+--------
+
+#. Ensure you have python3 and the dependencies installed.
+#. Open a terminal in the same directory as search_word_docs.py
+#. Execute `python search_word_docs.py`
+#. Select a directory to search for word files.
+#. Provide a search term.
+#. Select/UnSelect the Recursive Searching Textbox.
+#. Click Search.
+#. If desired, click the 'Save' button and determine where you'd like to save the results.
+
+Updates are provided throughout the process, when finished the results will be provided in the bottom-most text box.
 
 Credits
 -------
