@@ -38,13 +38,11 @@ Usage
 --------
 
 #. Ensure you have python3 and the dependencies installed.
-#. Open a terminal in the same directory as search_word_docs.py
-#. Execute `python search_word_docs.py`
-#. Select a directory to search for word files.
-#. Provide a search term.
-#. Select/UnSelect the Recursive Searching Textbox.
-#. Click Search.
-#. If desired, click the 'Save' button and determine where you'd like to save the results.
+#. Open a terminal in the root directory of batch_header_footer_applicator
+#. Execute `python batch_header_footer_applicator`
+#. Use the first 'Browse' button to navigate to and select a text file containing the paths to the documents you'd like the header/footer applied to.
+#. Use the second 'Browse' button to navigate to and select the Word file containing the new header/footer to apply.
+#. Click 'Apply' to start the process.
 
 Updates are provided throughout the process, when finished the results will be provided in the bottom-most text box.
 
