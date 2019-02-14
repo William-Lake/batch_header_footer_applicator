@@ -1,2 +1,2 @@
-PySimpleGui
+PySimpleGUI
 pywin32
