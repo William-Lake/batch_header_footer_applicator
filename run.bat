@@ -4,6 +4,12 @@ REM  ======================================================================= Mai
 
 SET do_run=TRUE
 
+cls
+
+ECHO +=======================================+ 
+ECHO Batch Header Footer Application Installer
+ECHO +=======================================+ 
+
 REM We first need to check that Python is installed.
 python -V
 
@@ -19,6 +25,8 @@ IF "%do_run%" == "TRUE" (
     python batch_header_footer_applicator
 )
 
+cls
+
 GOTO :EOF
 
 REM  ======================================================================= NoPython
@@ -26,6 +34,7 @@ REM  ======================================================================= NoP
 REM Outlines what to do if Python isn't installed
 
 :NoPython
+cls
 ECHO Python is not installed and needs to be both installed and on your PATH in order to use the batch_header_footer_applicator.
 set /p tmp=Press any key to open a web browser to the Python Downloads section.
 REM start "" https://www.python.org/downloads/
@@ -44,6 +53,9 @@ REM  ======================================================================= Che
 REM Ensures a given Python Module is installed.
 
 :CheckForModule
+
+cls
+
 IF "%~1%" == "pywin32" (
     python -c "import win32com.client as win32"
 ) ELSE (
@@ -52,6 +64,8 @@ IF "%~1%" == "pywin32" (
 
 IF ERRORLEVEL 1 CALL :NoModule %~1%
 
+cls
+
 GOTO :EOF
 
 REM  ======================================================================= NoModule
@@ -59,7 +73,9 @@ REM  ======================================================================= NoM
 REM Attempts to install module, asking user first.
 
 :NoModule
-SET /p do_install=The Python module %~1% is not installed and is required by batch_header_footer_applicator. Install it? [Y/N]
+cls
+
+SET /p do_install=The Python module %~1% is not installed and is required by batch_header_footer_applicator. Install it? (!CASE SENSITIVE!) [Y/N]
 
 IF "%do_install%" == "Y" (
     pip install %~1%
