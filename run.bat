@@ -6,10 +6,6 @@ SET do_run=TRUE
 
 cls
 
-ECHO +=======================================+ 
-ECHO Batch Header Footer Application Installer
-ECHO +=======================================+ 
-
 REM We first need to check that Python is installed.
 python -V
 
